@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        //dadada
         File file = new File("słowa.txt");
         ArrayList<String> words = new ArrayList<>();
         Scanner scanner;
