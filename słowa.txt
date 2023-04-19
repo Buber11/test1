@@ -1,0 +1,6 @@
+abandon 3
+ability 6
+able 1
+about 3
+abroad 1
+absence 8
