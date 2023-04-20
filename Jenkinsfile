@@ -8,12 +8,16 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh 'mvn -B compile '
+         withMaven(maven : 'apache-maven-3.6.1') {
+                        bat'mvn clean compile'
+                    }
       }
     }
     stage('Test') {
       steps {
-        sh 'mvn -B test '
+         withMaven(maven : 'apache-maven-3.6.1') {
+                        bat'mvn clean compile'
+                    }
       }
     }
   }
