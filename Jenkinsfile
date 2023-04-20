@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools{
+    maven "M3"
+    jdk "JDK"
+  }
   stages {
     stage('Checkout') {
       steps {
@@ -8,13 +12,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-         withMaven(maven : 'M3') {
             bat 'mvn clean compile'
-                    }
-      }
-    }
-    stage('Test') {
-
+        }
     }
   }
 }
