@@ -12,9 +12,7 @@ pipeline {
     }
     stage('Build') {
       steps {
-            dir("C:\Users\Użytkownik\.jenkins\workspace\test"){
-                sh 'mvn clean compile'
-            }
+          bat 'mvn clean compile'
         }
     }
   }
