@@ -1,8 +1,5 @@
 pipeline {
   agent any
-  tools{
-    Maven "M3"
-  }
   stages {
     stage('Checkout') {
       steps {
@@ -11,12 +8,12 @@ pipeline {
     }
     stage('Build') {
       steps {
-        bat 'mvn compile'
+        sh 'mvn compile'
       }
     }
     stage('Test') {
       steps {
-        bat 'mvn test'
+        sh 'mvn test'
       }
     }
   }
