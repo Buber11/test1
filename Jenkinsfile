@@ -8,8 +8,8 @@ pipeline {
     }
     stage('Build') {
       steps {
-         withMaven(maven : 'apache-maven-3.6.1') {
-                        bat 'mvn clean compile'
+         withMaven(maven : 'M3') {
+            bat 'mvn clean compile'
                     }
       }
     }
